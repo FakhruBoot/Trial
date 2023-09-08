@@ -1,0 +1,21 @@
+
+To revert a pushed change in git:
+
+First Method: This will show the revert commit in code. It will change the code/file locally as well
+First get the commit id you want to revert from "git log"
+Then copy the id and put in " git revert commid_id"
+Your commit will revert and git will point to previous change.
+Then do git push to implement the revert.
+
+Second Method: This will not show the revert in code but you can see in commits section. It will change the code/file locally as well
+do " git revert HEAD"
+It will open a editor file where you can change the commit message.
+After editing and saving, you will see the command executed.
+Then you can push using " git push origin master" and the changes will be reverted and not seen in code but only in commits.
+
+Third Method: This will not show the revert in code as well as commits section. It will be as if you have not committed anything.
+This method also saves the file in local repository unlike other 2.
+Do "git reset HEAD~1"
+Then do "git push -f origin master"
+
+
