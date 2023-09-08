@@ -1,4 +1,26 @@
-1. Commands to use Git:
+1. Creating SSH key and connecting your github account to local computer
+
+First open github and put below command 
+ssh-keygen -t rsa -b 4096 -C "<github_email_id>"
+
+This will generate a public and private SSH key for your system.
+Save that in default folder and give passphrase if you can remember
+
+Now we check if SSH agent is working
+eval $(ssh-agent)
+
+Then you add the SSH key to the agent
+ssh-add ~/.ssh/id_rsa
+
+Copy the public SSH key to put in github 
+clip < ~/.ssh/id_rsa.pub
+
+Now open github-->settings-->SSH and GPG Keys-->New SSH Key
+
+Give desired name and paste the public key. 
+Now your connection is done and you can push your code.
+
+2. Commands to use Git:
 
 git init     		 	--> Initializes git repository
 git add .    		 	--> Adds all files in a branch to commit
@@ -12,7 +34,7 @@ git status			--> Shows which files are left to commit or updated
 
 
 
-2.To revert a pushed change in git:
+3.To revert a pushed change in git:
 
 First Method: This will show the revert commit in code. It will change the code/file locally as well
 First get the commit id you want to revert from "git log"
