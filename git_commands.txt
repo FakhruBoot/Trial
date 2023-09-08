@@ -1,5 +1,18 @@
+1. Commands to use Git:
 
-To revert a pushed change in git:
+git init     		 	--> Initializes git repository
+git add .    		 	--> Adds all files in a branch to commit
+git add filename	 	--> Adds specefic files to commit
+git commit -m "comments" 	--> Commits into the branch
+git push origin branchname	--> Pushes the commit in the remote repository in the branch
+git merge branchname		--> merges all the pushed commits to the master branch
+git branch branchname		--> Creates a new branch
+git status			--> Shows which files are left to commit or updated
+
+
+
+
+2.To revert a pushed change in git:
 
 First Method: This will show the revert commit in code. It will change the code/file locally as well
 First get the commit id you want to revert from "git log"
